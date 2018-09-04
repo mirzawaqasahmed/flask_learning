@@ -1,0 +1,36 @@
+{% extends "project01_base.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+
+    {% if message|length > 0 %}
+        
+        <p>Let see how you performed!!</p>
+        <p>Oh no! Looks like you had issues with your username!</p>
+        <p>Here are the requirements you failed:</p>
+        <!-- <p>The username provided was {{ username }}</p> -->
+
+        <ul>
+        
+            {% for item in message %}
+
+                <li>{{ item }}</li>
+
+            {% endfor %}
+            
+        </ul>
+
+        <p>The username is {{ username }}</p>
+
+    {% else %}
+    
+        <p>Let see how you performed!!</p>
+        <p>Your UserName passed the 3 requirements!</p>
+        <!-- <p>The username provided was {{ username }}</p> -->
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "form_ex02_base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+
+  <h1>Thank you. Here is the info you gave us:</h1>
+
+  <!-- <ul>
+
+    <li>Breed: {{ session['breed'] }}</li>
+    <li>Neutered: {{ session['neutered'] }}</li>
+    <li>Food: {{ session['food'] }}</li>
+    <li>Mood: {{ session['mood'] }}</li>
+    <li>Feedback: {{ session['feedback'] }}</li>
+
+  </ul> -->
+
+  <div class="table-responsive-sm">
+
+    <table class="table table-bordered table-hover table-sm">
+      <!-- caption alignment can be 	left, right, top, bottom -->
+      <caption style="caption-side: bottom; text-align: center;">
+        - Your response -
+      </caption>
+
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Breed</th>
+          <th scope="col">Neutered</th>
+          <th scope="col">Food</th>
+          <th scope="col">Mood</th>
+          <th scope="col">Feedback</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <th scope="row">{{ session['breed'] }} </th>
+          <td>{{ session['neutered'] }}</td>
+          <td>{{ session['food'] }}</td>
+          <td>{{ session['mood'] }}</td>
+          <td>{{ session['feedback'] }}</td>
+        </tr>
+
+     </tbody>
+
+  </table>
+
+  </div>
+
+</div>
+
+{% endblock %}

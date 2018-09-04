@@ -1,0 +1,37 @@
+{% extends "table_base.html" %}
+
+{% block content %}
+<div class="table-responsive-sm">
+
+  <table class="table table-bordered table-hover table-sm">
+    <!-- caption alignment can be 	left, right, top, bottom -->
+    <caption style="caption-side: top; text-align: center;">List of users</caption>
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      {% for user in users %}
+
+      <tr>
+        <th scope="row">{{user['#']}} </th>
+        <td>{{user['first']}}</td>
+        <td>{{user['last']}}</td>
+        <td>{{user['handle']}}</td>
+      </tr>
+
+    {% endfor %}
+
+   </tbody>
+
+</table>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+h1{
+    /* font-family: cursive; */
+    /* font-family: monospace; */
+    /* font-family: Apple Chancery; */
+    font-family: 'Pacifico', cursive;
+}
+p{
+    font-size: 20px;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-family: Hei;
+    /* for list of fonts specific to OS search "List of typefaces included with macOS" */
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+/* You can also grab fonts from internet and implement it. The best way to do is google font api.
+https://fonts.google.com. First you select the font and then select the plus sign.
+Then you expand the new small window...First you need to copy link href to .html file and then use the font style in css.  */

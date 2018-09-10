@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+
+    <!-- the current_user and is_authenticated is coming from the @loging_manager.user_loader. i.e. user_loader function -->
+    {% if current_user.is_authenticated %}
+
+    <p>Welcome {{ current_user.username }}:</p>
+
+    {% else %}
+
+    <p>Please login or register!</p>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}
